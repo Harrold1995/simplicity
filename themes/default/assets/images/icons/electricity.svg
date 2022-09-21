@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+  <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <style>.cls-1,.cls-2{fill:none;}.cls-1{stroke:#6a8b9c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style>
+    </defs>
+    <title/>
+    <g data-name="katman 2" id="katman_2">
+      <g id="icons">
+        <path class="cls-1" d="M47,21V33a6,6,0,0,1-6,6H35a6,6,0,0,1-6-6V21"/>
+        <path class="cls-1" d="M45,21h2a2,2,0,0,0,2-2V17H27v2a2,2,0,0,0,2,2h4"/>
+        <line class="cls-1" x1="37.83" x2="40" y1="21" y2="21"/>
+        <path class="cls-1" d="M34,7h0a2,2,0,0,1,2,2v8a0,0,0,0,1,0,0H32a0,0,0,0,1,0,0V9a2,2,0,0,1,2-2Z"/>
+        <path class="cls-1" d="M42,7h0a2,2,0,0,1,2,2v8a0,0,0,0,1,0,0H40a0,0,0,0,1,0,0V9A2,2,0,0,1,42,7Z"/>
+        <path class="cls-1" d="M39,42H37a2,2,0,0,1-2-2V39h6v1A2,2,0,0,1,39,42Z"/>
+        <line class="cls-1" x1="32" x2="32" y1="24" y2="29"/>
+        <line class="cls-1" x1="44" x2="44" y1="27" y2="31"/>
+        <line class="cls-1" x1="38" x2="38" y1="42" y2="50"/>
+        <path class="cls-1" d="M26,50a6,6,0,0,0,12,0"/>
+        <path class="cls-1" d="M26,30a6,6,0,0,0-12,0"/>
+        <line class="cls-1" x1="26" x2="26" y1="50" y2="30"/>
+        <line class="cls-1" x1="14" x2="14" y1="40" y2="30"/>
+        <rect class="cls-2" height="64" width="64"/>
+      </g>
+    </g>
+  </svg>

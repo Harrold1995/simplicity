@@ -1,0 +1,68 @@
+CREATE TABLE `tenant_data` (
+                `profile_id` int(11) NOT NULL,
+                `username` varchar(64) NOT NULL,
+                `password` varchar(60) NOT NULL
+              ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+              --
+              -- Dumping data for table `tenant_data`
+              --
+
+              INSERT INTO `tenant_data` (`profile_id`, `username`, `password`) VALUES
+              (2577, 'test', '$2y$10$OPIZFIYJuX46iU34jnS2jO3aBQExTJPfGCTwL.s4a4G1J7ay7NMpi');
+
+              --
+              -- Indexes for dumped tables
+              --
+
+              --
+              -- Indexes for table `tenant_data`
+              --
+              ALTER TABLE `tenant_data`
+                ADD UNIQUE KEY `profile_id` (`profile_id`);
+                
+                
+                
+                
+                
+                12/22/2021 fix slick settings issue:
+                
+                ALTER TABLE `slick_settings` ADD INDEX(`key`);
+ALTER TABLE `slick_settings` ADD INDEX(`user_id`);
+alter table `slick_settings` drop primary key
+
+
+
+
+
+ALTER TABLE `company_settings` ADD `company_name` VARCHAR(255) NULL AFTER `password`, ADD `company_phone` VARCHAR(255) NULL AFTER `company_name`, ADD `company_email` VARCHAR(255) NULL AFTER `company_phone`, ADD `company_logo` VARCHAR(255) NULL AFTER `company_email`;
+
+ALTER TABLE `company_settings` ADD `memorized_transaction_entry` INT(11) NULL AFTER `company_logo`, ADD `email_autocharge_notices` INT(11) NULL AFTER `memorized_transaction_entry`, ADD `email_payment_notices` INT(11) NULL AFTER `email_autocharge_notices`;
+ALTER TABLE `company_settings` ADD `Default_LC_setup` INT(11) NULL AFTER `email_payment_notices`;
+ALTER TABLE `properties` ADD `late_charge_setup_id` INT(11) NULL AFTER `key_code`;
+ALTER TABLE `company_settings` ADD `Default_LC_item` INT(11) NULL AFTER `Default_LC_setup`;
+ALTER TABLE `company_settings` ADD `company_address` VARCHAR(255) NULL AFTER `company_name`;
+ALTER TABLE `company_settings` ADD `company_address1` VARCHAR(255) NULL AFTER `company_address`, ADD `company_city` VARCHAR(255) NULL AFTER `company_address1`, ADD `company_state` VARCHAR(255) NULL AFTER `company_city`, ADD `company_zip` VARCHAR(255) NULL AFTER `company_state`;
+ALTER TABLE `company_settings` ADD `cur_capital_call` DATE NULL AFTER `Default_LC_item`;
+ALTER TABLE `properties` ADD `reserves` DECIMAL NULL AFTER `late_charge_setup_id`, ADD `additional_expense` DECIMAL NULL AFTER `reserves`, ADD `included_in_payables` DECIMAL NULL AFTER `additional_expense`, ADD `cc_notes` DECIMAL NULL AFTER `included_in_payables`, ADD `cc_amt` DECIMAL NULL AFTER `cc_notes`;
+ALTER TABLE `properties` ADD `mapping` VARCHAR(255) NULL AFTER `cc_amt`;
+ALTER TABLE `units` ADD `mapping` VARCHAR(255) NULL AFTER `Lead_Paint_Testing`;
+ALTER TABLE `contacts` CHANGE `first_name` `first_name` VARCHAR(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL, CHANGE `last_name` `last_name` VARCHAR(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL, CHANGE `relation` `relation` VARCHAR(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL, CHANGE `cell` `cell` VARCHAR(15) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL, CHANGE `home` `home` VARCHAR(15) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL, CHANGE `email` `email` VARCHAR(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL, CHANGE `work` `work` VARCHAR(15) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL, CHANGE `ext` `ext` VARCHAR(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL, CHANGE `photo` `photo` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL;
+ALTER TABLE `company_settings` ADD `default_ach_fee` DECIMAL NULL AFTER `cur_capital_call`, ADD `default_cc_fee` DECIMAL NULL AFTER `default_ach_fee`;
+ALTER TABLE `report_columns` ADD `link_type` VARCHAR(255) NULL AFTER `active`;
+ALTER TABLE `maintenance` CHANGE `created_by` `created_by` INT(11) NULL DEFAULT '0', CHANGE `status` `status` INT(11) NULL DEFAULT '0', CHANGE `priority` `priority` TINYINT(1) NULL DEFAULT '0';
+ALTER TABLE `company_settings` ADD `use_management_for_statement` TINYINT NOT NULL DEFAULT '1' AFTER `cur_capital_call`;
+ALTER TABLE `company_settings` ADD `management_check` TINYINT(1) NOT NULL DEFAULT '0' AFTER `use_management_for_statement`;
+ALTER TABLE `company_settings` ADD `tenant_notification_user` INT(11) NULL AFTER `management_check`;
+
+ALTER TABLE `company_settings` ADD `accept_ach` TINYINT NULL DEFAULT '1' AFTER `default_cc_fee`, ADD `accept_cc` TINYINT NULL DEFAULT '1' AFTER `accept_ach`;
+ALTER TABLE `profiles` ADD `invite_status` TINYINT NOT NULL DEFAULT '0' AFTER `custom`, ADD `newsletter` TINYINT NOT NULL DEFAULT '0' AFTER `invite_status`;
+ALTER TABLE `profiles` ADD `email_pay_notifications` TINYINT NULL DEFAULT '1' AFTER `custom`, ADD `email_charge_notifications` TINYINT NULL DEFAULT '1' AFTER `email_pay_notifications`;
+
+ALTER TABLE `banks` ADD `auto_rec_start_date` DATE NULL AFTER `custom`;
+
+ALTER TABLE `fin_ins` ADD `next_cursor` VARCHAR(255) NULL DEFAULT NULL AFTER `custom`;
+ALTER TABLE `plaid_trans` ADD `removed` TINYINT(1) NULL DEFAULT '0' AFTER `trans_match`;
+ALTER TABLE `users` ADD `colors` VARCHAR(255) NULL AFTER `phone`;
+
+ALTER TABLE `property_keys` ADD `ikey` VARCHAR(128) NULL AFTER `key`;

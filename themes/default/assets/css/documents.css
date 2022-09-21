@@ -1,0 +1,403 @@
+.d-left {
+    background: #fff !important;
+    border-radius: 0 !important;
+}
+
+.d-right {
+    background: #f6f6f6 !important;
+    border-radius: 0 !important;
+}
+
+.d-folder-wrapper{
+    padding:10px;
+}
+
+.d-folder{
+    width:100%;
+    height: auto;
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.d-folder:hover{
+    background: #eee;
+}
+
+.d-folder img{
+    width: 25%;
+    margin-bottom: 25px;
+}
+
+.d-folder p{
+    font-size:1rem;
+    color: #111111;
+}
+
+#d-search{
+    width: 300px;
+}
+
+.d-filters-popup, .d-columns-popup{
+    display:none;
+    position:absolute;
+    background:#fff;
+    padding:20px;
+    padding-top: 38px;
+    z-index:3;
+    top: 18px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16);
+    width: calc(100% - 36px);
+}
+
+#d-columns-popup{
+    width: 100%;
+    padding:20px !important;
+}
+
+.d-filters-popup ul, .d-columns-popup ul{
+    list-style:none;
+    padding-left:0;
+    margin-bottom:0;
+}
+
+.d-filters-popup li, .d-columns-popup li{
+    display: flex;
+    cursor: pointer;
+}
+
+.d-filters-button {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+}
+
+.d-filters-back{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #8f8e94;
+    font-size:24px;
+}
+
+.d-filters-button button{
+    padding:10px;
+    background: #e41ecb;
+    color: #fff;
+    font-weight: 600;
+    z-index:4;
+}
+
+.d-filters-overlay, .d-columns-overlay {
+    display: none;
+    position: fixed;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+
+#documents-header {
+    margin-bottom: 10px;
+}
+
+#documents-header .form-search, #documents-header .form-search p {
+    margin: 0;
+}
+
+/* SWITCH STYLES */
+       /* The switch - the box around the slider */
+   .switch {
+       position: relative;
+       display: inline-block;
+       width: 30px;
+       height: 17px;
+       margin-right:10px;
+       cursor: pointer;
+   }
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.switch .option-text{
+    margin-left: 40px;
+}
+input:checked + .slider {
+    background-color: #e41ecb;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 17px;
+}
+
+.d-breadcrumbs{
+    margin-bottom: 15px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+/* SWITCH STYLES END */
+
+.dataTables_wrapper .dataTables_filter {
+    float: right;
+    text-align: right;
+    display: none;
+}
+
+
+.d-filters-back{
+    cursor:pointer;
+    margin-right:10px;
+}
+
+.list-square li{
+    margin: 0;
+}
+
+footer{
+    flex-direction: unset !important;
+}
+form{
+    display:block !important;
+}
+
+footer form{
+    padding-bottom:20px;
+    width:100%;
+}
+/*DATATABLES*/
+.table-d td{
+    background: #fff;
+    border-bottom: solid 5px #f6f6f6 !important;
+    vertical-align:middle;
+}
+.table-d .select:before {
+    right: 5px;
+    color: #757575;
+}
+.table-d .select:after {
+    box-shadow: 0 3px 6px rgba(0,0,0,.16);
+    border-radius: 5px;
+    border-width: 0;
+    background: #fff;
+}
+.table-d .list-square li, .table-d .list-square a {
+    overflow: visible;
+    width: auto;
+    height: 20px;
+    text-indent: 0;
+}
+.table-d .list-square li {
+    box-shadow: none;
+    border-radius: 0;
+    background: none;
+}
+.list-square {
+    z-index:1;
+}
+.list-square li {
+    position: relative;
+    float: left;
+    width: 36px;
+    height: 36px;
+    margin: 0 12px 6px 0;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16);
+    border-radius: 5px;
+    background: #fff;
+}
+.table-d th, .table-d td {
+    padding-left: 7px !important;
+    padding-right: 13px !important;
+    border: 0;
+}
+.table-d tr td:last-child{
+    width:1%;
+    white-space:nowrap;
+}
+/*FILE UPLOAD*/
+.d-fileprogress {
+    color: #000 !important;
+    background-color: #f1f1f1 !important;
+    margin:0 10px;
+    height:16px;
+}
+.d-fileprogress .container{
+    color: #fff!important;
+    background-color: #4CAF50!important;
+    padding: 0;
+    display: table;
+    clear: both;
+    margin: 0;
+    text-align:center;
+    height:100%;
+}
+.file-select {
+    padding:3px;
+    font-size: 14px;
+    height:20px;
+}
+#documents-container .table-d tr td{
+    border:0 !important;
+    /*border-top: solid 5px #f6f6f6 !important;*/
+}
+
+#documents-container .table-d tr.selects-row td {
+
+    padding: 5px;
+    background: #d1d6da;
+}
+#documents-container .table-d tr.file-row td {
+
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+#documents-container .table-d tr td{
+    z-index: unset !important;
+}
+tr.file-row{
+    -webkit-box-shadow: 0px -1px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -1px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px -1px 3px 0px rgba(0,0,0,0.75);
+    border-top: solid 3px #aaa !important;
+}
+#documents-container .table-d tr.file-row td:nth-child(2){
+width:40%;
+}
+#documents-container .table-d tr.file-row td:nth-child(3){
+width:40%;
+}
+
+#documents-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+#documents-header{
+    flex: 0 0 auto;
+}
+#documents-container{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0 5px;
+}
+#documents-container .d-files-content{
+    flex: 1 1 auto;
+    position: relative;/* need this to position inner content */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding:0 2px;
+}
+#documents-container .d-table-content{
+    flex: 1 1 auto;
+    position: relative;/* need this to position inner content */
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding:0 2px;
+}
+#documents-container footer{
+    flex: 0 0 auto;
+}
+#root{
+    height:100%;
+}
+.table-d {
+    border-collapse: separate;
+}
+.check label{
+    margin: 0 !important;
+    top:0;
+}
+.d-filedelete{
+    color:red;
+}
+.check label.active {
+    border-color: #e41ecb;
+    background: #e41ecb;
+}
+.check label {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    width: 13px;
+    height: 13px;
+    border-radius: 99px;
+    border: 1px solid #707070;
+    cursor: pointer;
+}
+.check label input{
+    position: absolute;
+    left: -3000em;
+    top: 0;
+    right: auto;
+    bottom: auto;
+
+}
+.check span{
+   margin-left:10px;
+}
+.d-table-content .dataTables_wrapper {
+    height:100%;
+}
+.d-table-content .dataTables_scroll {
+    display: flex;
+    flex-direction: column;
+}
+.d-table-content .dataTables_scrollHead {
+    flex:0 0 auto;
+    overflow-y: visible;
+}
+.d-table-content .dataTables_scrollBody {
+    flex: 1 1 auto;
+    overflow-y: scroll;
+    height: unset;
+}
+.d-table-content .dataTables_wrapper, .d-table-content .DTFC_ScrollWrapper, .d-table-content{
+    display: flex;
+    flex-direction: column;
+}
+table.dataTable thead th {
+    background: #f6f6f6;
+}

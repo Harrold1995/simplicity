@@ -1,0 +1,403 @@
+
+
+.hide {
+  visibility: hidden;
+  
+  }
+
+  .modal{
+    display: none!important;
+  }
+  
+  .print-section {
+  visibility: visible;
+  display: inline !important;
+  position: absolute;
+	left: 0;
+  top: 0;
+  margin: 0px 20px 0px 20px;
+  width: 100%;
+  height: calc(100% - 40px);    
+   counter-reset: page;
+
+  }
+  
+  .no-print {
+
+	display: none;
+  height: 0px;
+  }
+  
+  .datepicker-container{
+    display: none;
+    height: 0px;
+  }
+  input {
+	border: 0px;
+  }
+  
+  label::after {
+	content: ":";
+  }
+  
+  h2 span {
+	display: none;
+  }
+  
+  h2::after {
+
+  }
+
+
+#check_print {
+width: 790px;
+/* height: 1025px;*/
+/*border: 1px solid gray;*/
+size: portrait;
+display:none;
+
+
+}
+
+.horizontal {
+  size: landscape;
+}
+
+.stub tr{
+  display: table-row;
+} 
+#check {
+margin-top:20px;
+padding: 10px;
+height: 315px;
+width: 770px;
+
+
+
+}
+#name {
+float: left;
+width:45%;
+}
+#check_info {
+float: right;
+}
+#check_info  th  {
+text-align: center;
+padding: 0;
+
+}
+
+#Amount_num {
+text-align: right;
+}
+
+#textAmount {
+position: relative;
+white-space: nowrap;
+top: 55px;
+height: 20px;
+display: inline-block;
+text-align: center;
+}
+
+#bottum {
+  position: relative;
+  top: -105px;
+  height:70px;
+  
+  
+}
+#signature {
+text-align: center;
+border-top: 1px solid gray;
+position: absolute;
+left: 493px;
+top: 110px;
+width: 250px;
+}
+#accountNumber {
+position: relative;
+top: 145px;
+text-align: center;
+width:770px;
+
+ font-family: micr37;
+ font-size: 25px;
+ border-top: 1px solid gray;
+ padding-top: 10px;
+ padding-bottom: 20px;
+}
+ 
+}
+
+.blank #accountNumber {
+  top: 160px;
+}
+
+#routingNum {
+  padding-right:17px;
+}
+
+#stub td  {
+width: 30%;
+
+text-align:left;
+
+}
+#stub td:last-child {
+text-align: right;
+width:40%;
+/*color:red;*/
+}
+#stub table{
+width: 90%;
+
+}
+#stub {
+ /*text-align: center;*/
+ padding: 30px 20px 20px 20px;
+ height: 305px;
+ width: 770px;
+ overflow: hidden;
+}
+
+@page {
+   margin: 0;
+   
+  background-color: #003300;
+
+  }
+  body { 
+    
+
+   
+   }
+
+   @page {
+    margin: 5px;
+    padding-top:30px;
+    
+   
+   }
+   body { 
+     
+    }
+ 
+ #page{
+   width:92%;
+   max-width:92%;
+   /*height: 1365px;
+   max-height:1365px;*/
+   max-width:1365px;
+   /*border: 1px solid gray;*/
+   display:none;
+   size: landscape;
+   margin-right:  6%;
+   margin-left: 6%;
+   padding-top:30px;
+   
+ 
+     }
+     tr {
+      page-break-inside: initial;
+        display: block;
+   }
+     
+  .page-break {
+    page-break-after: always;
+    page-break-inside: avoid;
+    /*padding-top: 2px;*/
+  }
+   
+   #print_header{
+     text-align: center;
+     border-bottom: 1px solid black;
+     width: 100%;
+   
+   }	
+   
+   
+   #print_header_date{
+     position: absolute;
+     right:50px;
+     top: 30px;
+   }
+   #print_information {
+     position: relative;
+    } 
+   
+   
+   
+     #print_information  #statementsprint  {
+      width:100%;
+     
+ 
+     }  
+     #print_information #accountList ul{
+    width:100%;
+     }
+    
+     #print_information  #statementsprint .list-square {
+         display:none;
+     }
+    /* #print_information  #statementsprint  .overlay-g{
+       display:none;
+   }*/
+   #page table  {
+      max-width: 100%;
+      max-height:100%; 
+  }
+   
+   .reportPrintTable thead tr{
+     font-weight: bold;
+     border-bottom: 1px solid black;
+     font-size:16px;
+   }
+  
+   .reportPrintTable tbody{
+     font-size:13px;
+   }
+   #print_information tr:nth-child(even){
+    -webkit-print-color-adjust:exact;
+     /*background-color: #f2f2f2;*/}
+   #print_information td, #print_information th {
+     
+   
+     border: 1px solid #ddd;
+       padding: 8px;
+       
+   }
+ 
+   #print_information .reportPrintTable td, #print_information .reportPrintTable th {
+    font-family:  Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0px;
+   }
+
+   #print_header h2, .reportPrintTable h2, h3, h4 {
+     font-family:  Calibri, 'Trebuchet MS', sans-serif;
+     margin: 4px;
+   }
+
+   td.detail-control span{
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIW…aIJN0bgQRgIjnlmn1heSO5PE6Y2YXe+5Cr5+h++gs12AcAS6FS+7YOsj4AAAAASUVORK5CYII=);
+    background-repeat: no-repeat;
+    display: inline-block;
+    text-decoration: none;
+    width: 15px;
+
+  
+   }
+
+   .footer-total{
+    border-top: 1px solid #000 !important;
+   }
+
+   td.detail-control span.d-none, #page .dataTables_wrapper table thead {
+    display: none;
+   }  
+
+   .table-c.e td {
+    padding: 6.5px 12px;
+    padding-top: 6.5px;
+    padding-right: 12px;
+    padding-bottom: 6.5px;
+    padding-left: 12px;
+    background: none;
+    color: #8b8e8d;
+    
+    font-weight: 300;
+    text-align: left;
+    }
+
+    #bankName {
+    /* display:none; having problems with position*/  
+    max-width: 150px;
+    position: relative;
+    text-align: center;
+    display:inline-block;
+    font-size: .7em;
+    padding-left: 35px;
+    height:50px;
+
+
+    }
+
+    .investor{
+      font-family: Montserrat, Segoe_UI, "Segoe UI", Arial, Helvetica, sans-serif;
+    }
+    
+    .investor th, .investor td{
+      position: relative;
+      padding: 5px 14px;
+      border: 0 solid #e3e3e3;
+      border-bottom-width: 1px;
+      font-weight: 400;
+      text-align: left;
+      vertical-align: top;
+      font-size: .6em;
+    }
+
+    .investor th{
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-weight: 600;
+      font-size: .8em;
+    }
+
+    .investor tr{
+      display: table-row;
+    }
+
+    .investor .bank-info {
+      width:300px; 
+      margin:auto;
+     
+    }
+
+    
+
+    .property-container{
+      margin-right: 75px;
+      margin-left: 75px;
+      border-top: 1px solid rgb(105, 105, 105);
+    }
+
+    .investor .bank-info th, .investor .bank-info td{
+      border: none;
+    }
+ 
+    footer ul {
+       list-style: none;
+       width: 100%;
+       justify-content: center;
+    }
+
+    footer ul li{
+      float: left;
+      margin: 0 37px 0 0;
+      font-size: .8em;
+   }
+
+   tfoot tr{
+    display: table-row !important;
+   }
+
+    h2{
+      counter-increment: page;
+    }
+    #report_footer:after {
+
+      /*content: counter(page);*/
+  }
+
+
+
+
+
+
+   
+   
+   
+  
+  
